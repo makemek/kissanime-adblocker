@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Kissanime Adblocker",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://kissanime.ru/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "ad-html.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "*://*.mgid.com/*",
+    "*://*.bebi.com/*",
+    "*://*.2mdnsys.com/*",
+    "*://*.rotumal.com/*",
+    "*://*.native.propellerads.com/*",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": ["ad-js.js"]
+  }
+}
