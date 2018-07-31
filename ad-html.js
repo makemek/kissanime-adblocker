@@ -1,8 +1,11 @@
 // removing ads by setting display, visibility, or width height will trigger warning
 // we'll just move them away from the screen instead
 
-// iframe element usually contain ads within the page
-moveAway($('iframe'))
+// hide all ads iframes (like clicking hide)
+// this will eleminate floating 'hide' text
+for(n = 0; n < 12; ++n) {
+  $('#adsIfrme' + n).remove();
+}
 
 // horizontal ads
 $('div').each((i, div) => {
